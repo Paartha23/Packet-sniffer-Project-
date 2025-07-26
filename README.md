@@ -8,9 +8,8 @@ A lightweight Python-based network packet sniffer that captures live traffic usi
 
 - Captures live packets from a network interface (default: `eth0`)
 - Prints source/destination IP addresses
-- Shows protocol (TCP, UDP, ICMP, etc.)
+- Shows protocol names (e.g., TCP, UDP, ICMP) by decoding protocol numbers
 - Displays port numbers (for TCP/UDP)
-- Includes timestamps for each packet
 
 ---
 
@@ -18,7 +17,7 @@ A lightweight Python-based network packet sniffer that captures live traffic usi
 
 - Uses Scapy’s `sniff()` function to monitor live traffic
 - Extracts IP, TCP, and UDP headers from each packet
-- Prints readable output with timestamps
+- Decodes protocol numbers (6, 17, etc.) into readable names using a mapping dictionary
 
 ---
 
@@ -27,6 +26,7 @@ A lightweight Python-based network packet sniffer that captures live traffic usi
 1. **Install Scapy**:
    ```bash
    pip install scapy
+
 
 2.**To run the script in admin  (requires sudo for admin rights)**:
   ```bash
